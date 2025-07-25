@@ -1,3 +1,4 @@
+git add .
 git init -b main## Hi there 👋
 
 <!--
