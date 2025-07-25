@@ -1,4 +1,4 @@
-git add .
+git remote add origin https://github.com/HarasAlLisan/mizan-al-bayan.gitgit add .
 git init -b main## Hi there 👋
 
 <!--
