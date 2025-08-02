@@ -1,7 +1,3 @@
-Streamlit"cd interface
-streamlit run app.py
-# interface/app.py
-
 import streamlit as st
 import json
 
@@ -40,4 +36,4 @@ for verse in quran["verses"]:
             if mizan.get("is_balanced_with_basmala"):
                 st.success("✅ هذه الآية متوازنة مع البسملة.")
         else:
-            st.warning("❗ لا يوجد تحليل ميزاني لهذه الآية.")
+            st.warning("❗ لا يوجد تحليل ميزاني لهذه الآية
