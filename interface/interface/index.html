@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>ميزان الفاتحة</title>
+  <style>
+    body { font-family: 'Amiri', serif; direction: rtl; padding: 2em; background: #f5f5f5; }
+    .verse { margin-bottom: 1.5em; background: #fff; padding: 1em; border-radius: 12px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+    .ayah { font-size: 1.5em; font-weight: bold; }
+    .mizan { color: #555; font-size: 0.95em; }
+  </style>
+</head>
+<body>
+  <h1>عرض ميزان سورة الفاتحة</h1>
+  <div id="app">جاري التحميل...</div>
+
+  <script>
+    async function loadData() {
+      const [quran, mizan] = await Promise.all([
+        fetch('../data/quran_original.json').then(res => res.json()),
+        fetch('../data/quran_mizan.json').then(res => res.json())
+      ]);
+
+      const container = document.getElementById('app');
+      container.innerHTML = '';
+
+      quran.verses.forEach(verse => {
+        const verseMizan = mizan.find(m => m.verse_id === verse.id);
+        const div = document.createElement('div');
+        div.className = 'verse';
+
+        div.innerHTML = `
+          <div class="ayah">${verse.text_arabic}</div>
+          <div class="mizan">
+            ${verseMizan ? `
+              <strong>نوع البيان:</strong> ${verseMizan.mizan.type}<br />
+              <strong>النية:</strong> ${verseMizan.mizan.intent || verseMizan.mizan.primary_intent}<br />
+              <strong>التركيب:</strong> ${verseMizan.mizan.structure.join('، ')}<br />
+              <strong>عدد الحروف:</strong> ${verseMizan.mizan.letter_count}
+            ` : 'لا يوجد تحليل مرفق.'}
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    loadData();
+  </script>
+</body>
+</html>
