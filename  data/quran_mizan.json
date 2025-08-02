@@ -1,0 +1,24 @@
+{
+    "verse_id": 1,
+    "text_arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+    "mizan": {
+      "type": "مفتاح البيان",
+      "intent": "الاستعانة بالله قبل النطق",
+      "structure": ["جار ومجرور", "مضاف إلى اسم الجلالة", "صفتان"],
+      "letter_count": 19,
+      "root_code": "a1"
+    }
+  },
+  {
+    "verse_id": 5,
+    "text_arabic": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+    "mizan": {
+      "type": "إقرار نية",
+      "primary_intent": "العبادة الخالصة",
+      "supporting_intent": "طلب المعونة على العبادة",
+      "structure": ["مفعول به مقدم", "فعل جماعي", "عطف + طلب"],
+      "letter_count": 19,
+      "is_balanced_with_basmala": true
+    }
+  }
+]
