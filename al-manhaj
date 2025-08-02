@@ -1,0 +1,29 @@
+verse_types:
+  - مفتاح البيان
+  - تمجيد
+  - صفات الله
+  - إثبات الملك
+  - إقرار نية
+  - طلب الهداية
+  - تحديد الطريق
+
+intent_structure:
+  primary:
+    - عبادة
+    - هداية
+    - تثبيت
+  supporting:
+    - استعانة
+    - توكل
+    - شكر
+
+grammatical_units:
+  - جار ومجرور
+  - مفعول به
+  - اسم صفة
+  - فعل جماعي
+  - عطف + نفي + جمع
+
+numerical_constraints:
+  basmala_letters: 19
+  tolerance: 1
