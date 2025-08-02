@@ -1,3 +1,4 @@
+[![Sovereign Bayan](https://img.shields.io/badge/Bayan-Sovereign-blue?style=for-the-badge&logo=vercel&logoColor=white)](./SIYADA.md)
 # HarasAlLisan - حارس اللسان
 **إصدار الهاتف قبل انطلاق الجهاز**  
 **إعداد**: محمد ص. س. ح. ع. حجاج – حارس اللسان  
